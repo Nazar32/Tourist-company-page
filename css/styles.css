@@ -1,0 +1,120 @@
+@import url(../sass/reset.scss);
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.main-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.top-bar {
+  background: #004b8e;
+}
+
+nav.main-wrapper {
+  background: #FAEBD7;
+}
+
+.top-bar ul {
+  overflow: hidden;
+}
+
+.top-bar ul li {
+  display: inline-block;
+}
+
+.top-nav-link {
+  display: inline-block;
+  padding: 10px 10px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.top-nav-link:hover {
+  color: #cccccc;
+}
+
+.logo-1 {
+  display: inline-block;
+  padding: 10px 0;
+}
+
+.menu {
+  float: right;
+}
+
+.search, .profile, .profile:after, .top-bar ul {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.search {
+  width: 20px;
+  height: 20px;
+  background: url(../img/Core/desctop/icon-search.png) no-repeat;
+  margin-left: 20px;
+}
+
+.profile {
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.profile:after {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 8px 5px 0 5px;
+  border-color: #fff transparent transparent transparent;
+  content: "";
+}
+
+.descr {
+  position: absolute;
+  top: 40%;
+  left: 11%;
+}
+
+.descr-header {
+  font-size: 60px;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+p.descr-text {
+  color: #fff;
+  font-size: 26px;
+}
+
+.slide_text {
+  bottom: 40%;
+  color: #fff;
+  left: 0;
+  padding: 1em;
+  position: absolute;
+  width: 100%;
+  zoom: 1;
+  text-align: center;
+}
+
+.descr-text {
+  margin: 2% 0;
+}
+
+.slider-btn {
+  width: 270px;
+  height: 50px;
+  color: #fff;
+  background: #FFA300;
+  border: none;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
