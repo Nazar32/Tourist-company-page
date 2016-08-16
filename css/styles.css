@@ -74,6 +74,10 @@ nav.main-wrapper {
   content: "";
 }
 
+.slides li {
+  position: relative;
+}
+
 .descr {
   position: absolute;
   top: 40%;
