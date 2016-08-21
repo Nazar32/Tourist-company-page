@@ -1,4 +1,4 @@
-@import url(../sass/reset.scss);
+@import url(reset.scss);
 /* -------------------------------------------------------------
  *  Sass CSS3 Mixins! The Cross-Browser CSS3 Sass Library
  *  By: Matthieu Aussaguel, http://www.mynameismatthieu.com, @matthieu_tweets
@@ -12,67 +12,62 @@
  *  more info: http://www.findmebyip.com/litmus/#css3-properties
  *
  *------------------------------------------------------------- */
+@font-face {
+  font-family: "Fonts";
+  src: url("../fonts/leaguegothic-regular-webfont.eot") format("eot");
+  src: url("../fonts/leaguegothic-regular-webfont.svg") format("svg");
+  src: url("../fonts/leaguegothic-regular-webfont.ttf") format("ttf");
+  src: url("../fonts/leaguegothic-regular-webfont.woff") format("woff");
+  src: url("../fonts/leaguegothic-regular-webfont.woff2") format("woff2"); }
 a {
   color: #fff;
-  text-decoration: none;
-}
+  text-decoration: none; }
 
 .main-wrapper {
   width: 100%;
   max-width: 1200px;
   margin: auto;
-  overflow: hidden;
-}
+  overflow: hidden; }
 
 .top-bar {
-  background: #004b8e;
-}
+  background: #004b8e; }
 
 .top-bar ul {
-  overflow: hidden;
-}
+  overflow: hidden; }
 
 .top-bar ul li {
-  display: inline-block;
-}
+  display: inline-block; }
 
 .top-nav-link {
   display: inline-block;
   padding: 10px 10px;
   color: #fff;
   text-decoration: none;
-  text-transform: uppercase;
-}
+  text-transform: uppercase; }
 
 .top-nav-link:hover {
-  color: #cccccc;
-}
+  color: #cccccc; }
 
 .logo-1 {
   display: inline-block;
-  padding: 10px 0;
-}
+  padding: 10px 0; }
 
 .menu {
-  float: right;
-}
+  float: right; }
 
 .search, .profile, .profile:after, .top-bar ul {
   display: inline-block;
-  vertical-align: middle;
-}
+  vertical-align: middle; }
 
 .search {
   width: 20px;
   height: 20px;
   background: url(../img/Core/desctop/icon-search.png) no-repeat;
-  margin-left: 20px;
-}
+  margin-left: 20px; }
 
 .profile {
   overflow: hidden;
-  cursor: pointer;
-}
+  cursor: pointer; }
 
 .profile:after {
   width: 0;
@@ -80,44 +75,33 @@ a {
   border-style: solid;
   border-width: 8px 5px 0 5px;
   border-color: #fff transparent transparent transparent;
-  content: "";
-}
+  content: ""; }
 
 .slides li {
-  position: relative;
-}
+  position: relative; }
 
 .descr {
   position: absolute;
   top: 40%;
-  left: 11%;
-}
+  left: 11%; }
 
 .descr-header {
   font-size: 60px;
   color: #fff;
   font-weight: bold;
-  text-transform: uppercase;
-}
-
-@media screen and (max-width: 800px) {
-  .descr-header {
-    line-height: 1.2;
-    font-size: 35px;
-  }
-}
+  text-transform: uppercase; }
+  @media screen and (max-width: 800px) {
+    .descr-header {
+      line-height: 1.2;
+      font-size: 35px; } }
 
 p.descr-text {
   color: #fff;
-  font-size: 26px;
-}
-
-@media screen and (max-width: 800px) {
-  p.descr-text {
-    line-height: 1.2;
-    font-size: 16px;
-  }
-}
+  font-size: 26px; }
+  @media screen and (max-width: 800px) {
+    p.descr-text {
+      line-height: 1.2;
+      font-size: 16px; } }
 
 .slide_text {
   width: 80%;
@@ -133,16 +117,13 @@ p.descr-text {
   -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
+  transform: translate(-50%, -50%); }
 
 .descr-text {
-  margin: 2% 0;
-}
+  margin: 2% 0; }
 
 .border-radius-my, .slider-btn {
-  border-radius: 30px;
-}
+  border-radius: 30px; }
 
 .slider-btn {
   width: 270px;
@@ -153,87 +134,65 @@ p.descr-text {
   text-transform: uppercase;
   font-size: 18px;
   font-weight: bold;
-  cursor: pointer;
-}
-
-@media screen and (max-width: 800px) {
-  .slider-btn {
-    width: 170px;
-    height: 25px;
-  }
-}
+  cursor: pointer; }
+  @media screen and (max-width: 800px) {
+    .slider-btn {
+      width: 170px;
+      height: 25px; } }
 
 @media screen and (max-width: 800px) {
   .slider-btn-text {
     line-height: 1.2;
     font-size: 11px;
     display: block;
-    width: 102%;
-  }
-}
+    width: 102%; } }
 
 @media screen and (max-width: 800px) {
   .flexslider .flex-control-nav {
     left: 75%;
-    bottom: 1%;
-  }
-}
+    bottom: 1%; } }
 
 @media screen and (max-width: 800px) {
   .flexslider .flex-control-paging li a {
     width: 8px;
-    height: 8px;
-  }
-}
+    height: 8px; } }
 
 @media screen and (max-width: 800px) {
   .flexslider .flex-control-paging li a.flex-active {
     width: 14px;
     height: 14px;
-    line-height: 22px;
-  }
-}
+    line-height: 22px; } }
 
 @media screen and (max-width: 800px) {
   .flexslider .flex-control-nav li {
-    margin: 0 4px;
-  }
-}
+    margin: 0 4px; } }
 
 @media screen and (max-width: 800px) {
   .flexslider .flex-direction-nav a:before {
-    font-size: 20px;
-  }
-}
+    font-size: 20px; } }
 
 .nav-item {
   width: 10%;
   margin-left: 1px;
   text-align: center;
-  border-left: 1px solid #ccc;
-}
+  border-left: 1px solid #ccc; }
 
 .nav-item:last-child {
   border-left: 1px solid #ccc;
-  border-right: 1px solid #ccc;
-}
+  border-right: 1px solid #ccc; }
 
 .nav-item.to, .nav-item.from {
-  width: 22.5%;
-}
+  width: 22.5%; }
 
 .nav-item.date, .nav-item.duration, .nav-item.travelers {
-  width: 11.5%;
-}
+  width: 11.5%; }
 
 .nav-item.logo {
-  width: 10%;
-}
+  width: 10%; }
 
 .nav-filters {
   width: 100%;
-  display: flex;
-}
+  display: flex; }
 
 .nav-item-control:after {
   width: 0;
@@ -242,19 +201,17 @@ p.descr-text {
   border-style: solid;
   border-width: 8px 5px 0 5px;
   border-color: black transparent transparent transparent;
-  content: "";
-}
+  content: ""; }
 
 .nav-item-title, .nav-item-value, .nav-item-control {
   display: block;
-  text-transform: uppercase;
-}
+  text-transform: uppercase; }
 
 .nav-item-title {
-  font-size: 12px;
-}
+  font-size: 12px; }
 
 .nav-item-value {
   font-size: 24px;
-  font-weight: bold;
-}
+  font-weight: bold; }
+
+/*# sourceMappingURL=styles.css.map */
