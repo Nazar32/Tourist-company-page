@@ -1,14 +1,24 @@
 @import url(../sass/reset.scss);
+@import "mixins.sass"
 $color-link: #fff;
 $color-main-wrapper: #FAEBD7;
 $color-selected-link: #efefef;
 $amount-of-darken-link: 20%;
 $color-main: #FFA300;
+$target-width: 800px;
+
+@font-face 
+    font-family: "Fonts"
+    src: url("../fonts/leaguegothic-regular-webfont.eot") format("eot"),
+         url("../fonts/leaguegothic-regular-webfont.svg") format("svg"),
+         url("../fonts/leaguegothic-regular-webfont.ttf") format("ttf"),
+         url("../fonts/leaguegothic-regular-webfont.woff") format("woff"),
+         url("../fonts/leaguegothic-regular-webfont.woff2") format("woff2")
+
 
 a
 	color: $color-link
 	text-decoration: none
-
 
 .main-wrapper
 	width: 100%
@@ -17,10 +27,7 @@ a
 	overflow: hidden
 	
 .top-bar
-	background: #004b8e 
-
-nav.main-wrapper
-	background: $color-main-wrapper
+	background: #004b8e
 
 .top-bar ul
 	overflow: hidden
@@ -83,24 +90,35 @@ nav.main-wrapper
 	color: $color-link
 	font-weight: bold
 	text-transform: uppercase
+	@media screen and (max-width: 800px) 
+	    line-height: 1.2
+	    font-size: 35px
+  
 
 p.descr-text 	
  	color: $color-link
  	font-size: 26px
+ 	@media screen and (max-width: 800px) 
+	    line-height: 1.2
+	    font-size: 16px
 
 
 .slide_text 
-	bottom: 40%
+	width: 80%
 	color: $color-link
-	left: 0
 	padding: 1em
 	position: absolute
-	width: 100%
 	zoom: 1
 	text-align: center
+	top: 50%
+	left: 50%
+	@include transform(translate(-50%, -50%))	
 
 .descr-text
 	margin: 2% 0
+
+.border-radius-my
+	border-radius: 30px
 
 .slider-btn 
 	width: 270px
@@ -112,4 +130,91 @@ p.descr-text
 	font-size: 18px
 	font-weight: bold
 	cursor: pointer
+	@extend .border-radius-my
+	@media screen and (max-width: $target-width) 
+		width: 170px
+		height: 25px
+
+.slider-btn-text
+	@media screen and (max-width: $target-width) 
+		line-height: 1.2
+		font-size: 11px
+		display: block
+		width: 102%
+
+
+.flexslider 
+	.flex-control-nav
+		@media screen and (max-width: $target-width) 
+			left: 75%
+			bottom: 1%
+
+.flexslider 
+	.flex-control-paging li a 
+		@media screen and (max-width: $target-width) 
+			width: 8px
+			height: 8px
+
+.flexslider 
+	.flex-control-paging li a.flex-active
+		@media screen and (max-width: $target-width) 
+			width: 14px
+			height: 14px
+			line-height: 22px
+
+.flexslider 
+	.flex-control-nav li
+		@media screen and (max-width: $target-width) 
+			margin: 0 4px
+
+.flexslider 
+	.flex-direction-nav a 
+		&:before
+			@media screen and (max-width: $target-width) 
+				font-size: 20px
+
+.nav-item
+	width: 10%
+	margin-left: 1px
+	text-align: center
+	border-left: 1px solid #ccc
+
+.nav-item
+	&:last-child
+		border-left: 1px solid #ccc
+		border-right: 1px solid #ccc
+
+.nav-item.to, .nav-item.from
+	width: 22.5%
+
+.nav-item.date, .nav-item.duration, .nav-item.travelers
+	width: 11.5%
+
+.nav-item.logo
+	width: 10%
+
+.nav-filters
+	width: 100%
+	display: flex
+	
+.nav-item-control
+	&:after
+		width: 0
+		height: 0
+		display: inline-block
+		border-style: solid
+		border-width: 8px 5px 0 5px
+		border-color: black transparent transparent transparent
+		content: ""
+
+.nav-item-title, .nav-item-value, .nav-item-control
+	display: block 
+	text-transform: uppercase
+
+.nav-item-title
+	font-size: 12px
+
+.nav-item-value
+	font-size: 24px
+	font-weight: bold
 

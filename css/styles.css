@@ -1,4 +1,17 @@
 @import url(../sass/reset.scss);
+/* -------------------------------------------------------------
+ *  Sass CSS3 Mixins! The Cross-Browser CSS3 Sass Library
+ *  By: Matthieu Aussaguel, http://www.mynameismatthieu.com, @matthieu_tweets
+ *
+ *  List of CSS3 Sass Mixins File to be @imported and @included as you need
+ *
+ *  The purpose of this library is to facilitate the use of CSS3 on different browsers avoiding HARD TO READ and NEVER
+ *  ENDING css files
+ *
+ *  note: All CSS3 Properties are being supported by Safari 5
+ *  more info: http://www.findmebyip.com/litmus/#css3-properties
+ *
+ *------------------------------------------------------------- */
 a {
   color: #fff;
   text-decoration: none;
@@ -13,10 +26,6 @@ a {
 
 .top-bar {
   background: #004b8e;
-}
-
-nav.main-wrapper {
-  background: #FAEBD7;
 }
 
 .top-bar ul {
@@ -91,24 +100,48 @@ nav.main-wrapper {
   text-transform: uppercase;
 }
 
+@media screen and (max-width: 800px) {
+  .descr-header {
+    line-height: 1.2;
+    font-size: 35px;
+  }
+}
+
 p.descr-text {
   color: #fff;
   font-size: 26px;
 }
 
+@media screen and (max-width: 800px) {
+  p.descr-text {
+    line-height: 1.2;
+    font-size: 16px;
+  }
+}
+
 .slide_text {
-  bottom: 40%;
+  width: 80%;
   color: #fff;
-  left: 0;
   padding: 1em;
   position: absolute;
-  width: 100%;
   zoom: 1;
   text-align: center;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -khtml-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .descr-text {
   margin: 2% 0;
+}
+
+.border-radius-my, .slider-btn {
+  border-radius: 30px;
 }
 
 .slider-btn {
@@ -121,4 +154,107 @@ p.descr-text {
   font-size: 18px;
   font-weight: bold;
   cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+  .slider-btn {
+    width: 170px;
+    height: 25px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .slider-btn-text {
+    line-height: 1.2;
+    font-size: 11px;
+    display: block;
+    width: 102%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .flexslider .flex-control-nav {
+    left: 75%;
+    bottom: 1%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .flexslider .flex-control-paging li a {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .flexslider .flex-control-paging li a.flex-active {
+    width: 14px;
+    height: 14px;
+    line-height: 22px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .flexslider .flex-control-nav li {
+    margin: 0 4px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .flexslider .flex-direction-nav a:before {
+    font-size: 20px;
+  }
+}
+
+.nav-item {
+  width: 10%;
+  margin-left: 1px;
+  text-align: center;
+  border-left: 1px solid #ccc;
+}
+
+.nav-item:last-child {
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+
+.nav-item.to, .nav-item.from {
+  width: 22.5%;
+}
+
+.nav-item.date, .nav-item.duration, .nav-item.travelers {
+  width: 11.5%;
+}
+
+.nav-item.logo {
+  width: 10%;
+}
+
+.nav-filters {
+  width: 100%;
+  display: flex;
+}
+
+.nav-item-control:after {
+  width: 0;
+  height: 0;
+  display: inline-block;
+  border-style: solid;
+  border-width: 8px 5px 0 5px;
+  border-color: black transparent transparent transparent;
+  content: "";
+}
+
+.nav-item-title, .nav-item-value, .nav-item-control {
+  display: block;
+  text-transform: uppercase;
+}
+
+.nav-item-title {
+  font-size: 12px;
+}
+
+.nav-item-value {
+  font-size: 24px;
+  font-weight: bold;
 }
